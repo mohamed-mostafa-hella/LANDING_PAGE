@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueWave Tech — Smart Speaker</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function switchLang(lang) {
+            document.documentElement.lang = lang;
+            document.body.className = lang;
+        }
+    </script>
+</head>
+
+<body class="ar">
+    <nav class="main-nav">
+        <a href="#" class="brand" aria-label="BlueWave Home">
+            <svg class="brand-logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+                        <stop offset="0%" stop-color="#06b6d4" />
+                        <stop offset="100%" stop-color="#3b82f6" />
+                    </linearGradient>
+                </defs>
+                <rect x="4" y="4" width="56" height="56" rx="12" fill="url(#g2)" />
+                <path d="M16 40c6 0 10-8 16-8s10 8 16 8" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                <path d="M16 28c6 0 10-8 16-8s10 8 16 8" fill="none" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-name">BlueWave Tech</span>
+        </a>
+        <div class="nav-links">
+            <a href="#features" class="en">Features</a>
+            <a href="#gallery" class="en">Gallery</a>
+            <a href="#pricing" class="en">Pricing</a>
+            <a href="#order" class="btn small en">Order</a>
+            <a href="#features" class="ar" style="display:none;">الميزات</a>
+            <a href="#gallery" class="ar" style="display:none;">المعرض</a>
+            <a href="#pricing" class="ar" style="display:none;">الأسعار</a>
+            <a href="#order" class="btn small ar" style="display:none;">اطلب الآن</a>
+        </div>
+    </nav>
+    <div class="container">
+        <header class="hero">
+            <div class="hero-inner">
+                <div class="hero-badge en">New • Gen 3</div>
+                <div class="hero-badge ar" style="display:none;">جديد • الجيل الثالث</div>
+                <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                    aria-label="BlueWave Tech Logo">
+                    <defs>
+                        <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                            <stop offset="0%" stop-color="#06b6d4" />
+                            <stop offset="100%" stop-color="#3b82f6" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#g)" />
+                    <path d="M16 40c6 0 10-8 16-8s10 8 16 8" fill="none" stroke="#ffffff" stroke-width="4"
+                        stroke-linecap="round" />
+                    <path d="M16 28c6 0 10-8 16-8s10 8 16 8" fill="none" stroke="#e0f2fe" stroke-width="3"
+                        stroke-linecap="round" />
+                </svg>
+                <h1 class="company-name">BlueWave Tech</h1>
+                <p class="sub en">Immersive sound. Instant answers. Beautifully smart.</p>
+                <p class="sub ar" style="display:none;">صوت غامر. إجابات فورية. ذكاء جميل.</p>
+                <div class="cta-row">
+                    <a href="#buy" class="btn primary en">Buy Now</a>
+                    <a href="#features" class="btn ghost en">See Features</a>
+                    <a href="#buy" class="btn primary ar" style="display:none;">اشتري الآن</a>
+                    <a href="#features" class="btn ghost ar" style="display:none;">شاهد الميزات</a>
+                </div>
+                <ul class="hero-points en">
+                    <li>Room-filling audio</li>
+                    <li>Far‑field voice pickup</li>
+                    <li>Wi‑Fi + Bluetooth 5.3</li>
+                </ul>
+                <ul class="hero-points ar" style="display:none;">
+                    <li>صوت يملأ الغرفة</li>
+                    <li>التقاط صوت بعيد المدى</li>
+                    <li>واي فاي + بلوتوث 5.3</li>
+                </ul>
+            </div>
+            <div class="hero-visual">
+                <img class="hero-image"
+                    src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=1200&auto=format&fit=crop"
+                    alt="BlueWave Smart Speaker on a desk">
+            </div>
+        </header>
+        <main>
+            <section class="product" id="features">
+                <div class="product-images-scroll-wrapper">
+                    <button class="scroll-btn left" onclick="scrollImages(-1)">&#8592;</button>
+                    <div class="product-images-scroll" id="productImages">
+                        <img src="https://images.unsplash.com/photo-1586078875290-c22eb791ad5d?q=80&w=600&auto=format&fit=crop"
+                            alt="Speaker hero" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1511842745775-b366af36db2a?q=80&w=600&auto=format&fit=crop"
+                            alt="Modern living room with smart devices" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1640826808046-6d4d4faa30c8?q=80&w=600&auto=format&fit=crop"
+                            alt="Close-up device materials" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=600&auto=format&fit=crop"
+                            alt="Ambient lighting with speaker" class="product-image">
+                    </div>
+                    <div class="scroll-dots" id="productDots"></div>
+                    <button class="scroll-btn right" onclick="scrollImages(1)">&#8594;</button>
+                </div>
+                <div class="product-details">
+                    <h2 class="en">BlueWave Smart Speaker</h2>
+                    <h2 class="ar" style="display:none;">مكبر الصوت الذكي بلو ويف</h2>
+                    <p class="en">Experience lossless-quality audio, beamforming microphones, and effortless voice
+                        control — all wrapped in a minimalist design.</p>
+                    <p class="ar" style="display:none;">اختبر صوتاً عالي الدقة وميكروفونات بتقنية تشكيل الحزمة وتحكم
+                        صوتي سهل — ضمن تصميم أنيق بسيط.</p>
+                    <ul class="bullets en">
+                        <li>Adaptive EQ and spatial audio</li>
+                        <li>Wi‑Fi mesh and Bluetooth 5.3</li>
+                        <li>Privacy-first on‑device processing</li>
+                    </ul>
+                    <ul class="bullets ar" style="display:none;">
+                        <li>معادلة صوتية تكيفية وصوت محيطي</li>
+                        <li>شبكة واي فاي وبلوتوث 5.3</li>
+                        <li>خصوصية أولاً بمعالجة على الجهاز</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <h2 class="en">Product Gallery</h2>
+                <h2 class="ar" style="display:none;">معرض المنتج</h2>
+                <div class="gallery-images">
+                    <img src="https://images.unsplash.com/photo-1511842745775-b366af36db2a?q=80&w=600&auto=format&fit=crop"
+                        alt="Minimal desk setup with speaker">
+                    <img src="https://images.unsplash.com/photo-1586078875290-c22eb791ad5d?q=80&w=600&auto=format&fit=crop"
+                        alt="Smart home lighting">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=600&auto=format&fit=crop"
+                        alt="Hand interacting with device">
+                    <img src="https://images.unsplash.com/photo-1519558260268-cde7e03a0152?q=80&w=600&auto=format&fit=crop"
+                        alt="Lifestyle with music">
+                    <img src="https://images.unsplash.com/photo-1594419015530-4676f41c4bb9?q=80&w=600&auto=format&fit=crop"
+                        alt="Detail of speaker fabric">
+                    <img src="https://images.unsplash.com/photo-1640826808046-6d4d4faa30c8?q=80&w=600&auto=format&fit=crop"
+                        alt="Cozy living space">
+                    <img src="https://images.unsplash.com/photo-1511842745775-b366af36db2a?q=80&w=600&auto=format&fit=crop"
+                        alt="Minimal desk setup with speaker">
+                    <img src="https://images.unsplash.com/photo-1586078875290-c22eb791ad5d?q=80&w=600&auto=format&fit=crop"
+                        alt="Smart home lighting">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=600&auto=format&fit=crop"
+                        alt="Hand interacting with device">
+                    <img src="https://images.unsplash.com/photo-1519558260268-cde7e03a0152?q=80&w=600&auto=format&fit=crop"
+                        alt="Lifestyle with music">
+                    <img src="https://images.unsplash.com/photo-1594419015530-4676f41c4bb9?q=80&w=600&auto=format&fit=crop"
+                        alt="Detail of speaker fabric">
+                    <img src="https://images.unsplash.com/photo-1640826808046-6d4d4faa30c8?q=80&w=600&auto=format&fit=crop"
+                        alt="Cozy living space">
+                </div>
+            </section>
+
+            <section class="stats">
+                <h2 class="en">Why Choose BlueWave?</h2>
+                <h2 class="ar" style="display:none;">لماذا تختار بلو ويف؟</h2>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label en">Happy Users</div>
+                        <div class="stat-label ar" style="display:none;">مستخدم سعيد</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4.9/5</div>
+                        <div class="stat-label en">Average Rating</div>
+                        <div class="stat-label ar" style="display:none;">متوسط التقييم</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label en">Countries Sold</div>
+                        <div class="stat-label ar" style="display:none;">دولة تم البيع فيها</div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <h2 class="en">Watch the Product Video</h2>
+                <h2 class="ar" style="display:none;">شاهد فيديو المنتج</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/0ZUI_pHvNAc?rel=0&modestbranding=1"
+                        title="CMF Headphone Pro Review | Best Budget Headphones Under £100!" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <section class="features-cards">
+                <div class="card">
+                    <div class="icon">🎛️</div>
+                    <h3 class="en">Adaptive Sound</h3>
+                    <h3 class="ar" style="display:none;">الصوت التكيفي</h3>
+                    <p class="en">Auto‑tunes to your room for balanced, rich audio anywhere.</p>
+                    <p class="ar" style="display:none;">يضبط نفسه تلقائياً وفق غرفتك ليمنحك صوتاً متوازناً وغنياً في أي
+                        مكان.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🔒</div>
+                    <h3 class="en">Private by Design</h3>
+                    <h3 class="ar" style="display:none;">مصمم للخصوصية</h3>
+                    <p class="en">Local wake‑word detection and on‑device processing keep data safe.</p>
+                    <p class="ar" style="display:none;">اكتشاف محلي لكلمة التنبيه ومعالجة على الجهاز لتحافظ على أمان
+                        بياناتك.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">⚡</div>
+                    <h3 class="en">Seamless Setup</h3>
+                    <h3 class="ar" style="display:none;">إعداد سلس</h3>
+                    <p class="en">Pair in seconds with the BlueWave app and your favorite services.</p>
+                    <p class="ar" style="display:none;">يتصل خلال ثوانٍ عبر تطبيق BlueWave وخدماتك المفضلة.</p>
+                </div>
+            </section>
+
+            <section class="pricing offer" id="pricing">
+                <h2 class="en">Special Offer</h2>
+                <h2 class="ar" style="display:none;">عرض خاص</h2>
+                <div class="pricing-grid single">
+                    <div class="plan highlight">
+                        <div class="ribbon pulse en">50% OFF</div>
+                        <div class="ribbon pulse ar" style="display:none;">خصم 50%</div>
+                        <h3 class="en">BlueWave Smart Speaker</h3>
+                        <h3 class="ar" style="display:none;">مكبر الصوت الذكي بلو ويف</h3>
+                        <div class="price egp">
+                            <span class="now">EGP&nbsp;999</span>
+                            <span class="old">EGP&nbsp;1,998</span>
+                        </div>
+                        <ul class="features en">
+                            <li>Free delivery in Cairo & Giza</li>
+                            <li>14‑day returns</li>
+                            <li>1‑year warranty</li>
+                        </ul>
+                        <ul class="features ar" style="display:none;">
+                            <li>توصيل مجاني داخل القاهرة والجيزة</li>
+                            <li>إرجاع خلال 14 يوماً</li>
+                            <li>ضمان لمدة سنة</li>
+                        </ul>
+                        <a href="#order" class="btn primary en">Get the Offer</a>
+                        <a href="#order" class="btn primary ar" style="display:none;">احصل على العرض</a>
+                        <div class="timer en"><span class="dot"></span> Limited time only</div>
+                        <div class="timer ar" style="display:none;"><span class="dot"></span> لفترة محدودة فقط</div>
+                    </div>
+                </div>
+                <p class="fine en">Prices in Egyptian Pounds (EGP). VAT may apply.</p>
+                <p class="fine ar" style="display:none;">الأسعار بالجنيه المصري (EGP). قد تُطبق ضريبة القيمة المضافة.
+                </p>
+            </section>
+
+            <section id="buy" class="cta-band">
+                <div class="cta-content">
+                    <h2 class="en">Ready to upgrade your sound?</h2>
+                    <h2 class="ar" style="display:none;">هل أنت مستعد لترقية صوتك؟</h2>
+                    <a href="#" class="btn primary en">Get BlueWave</a>
+                    <a href="#" class="btn primary ar" style="display:none;">احصل على بلو ويف</a>
+                </div>
+            </section>
+
+            <section class="related" id="related">
+                <h2 class="en">Related Items</h2>
+                <h2 class="ar" style="display:none;">عناصر ذات صلة</h2>
+                <div class="related-grid">
+                    <article class="rel-card">
+                        <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?q=80&w=600&auto=format&fit=crop" alt="Bluetooth Earbuds">
+                        <div class="info">
+                            <h3 class="en">Bluetooth Earbuds</h3>
+                            <h3 class="ar" style="display:none;">سماعات أذن بلوتوث</h3>
+                            <div class="rel-price">EGP 699</div>
+                            <a href="#order" class="btn small en">Order</a>
+                            <a href="#order" class="btn small ar" style="display:none;">اطلب</a>
+                        </div>
+                    </article>
+                    <article class="rel-card">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600&auto=format&fit=crop" alt="Over‑ear Headphones">
+                        <div class="info">
+                            <h3 class="en">Over‑ear Headphones</h3>
+                            <h3 class="ar" style="display:none;">سماعات رأس</h3>
+                            <div class="rel-price">EGP 1,299</div>
+                            <a href="#order" class="btn small en">Order</a>
+                            <a href="#order" class="btn small ar" style="display:none;">اطلب</a>
+                        </div>
+                    </article>
+                    <article class="rel-card">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=600&auto=format&fit=crop" alt="Smart Home Hub">
+                        <div class="info">
+                            <h3 class="en">Smart Home Hub</h3>
+                            <h3 class="ar" style="display:none;">مركز المنزل الذكي</h3>
+                            <div class="rel-price">EGP 1,799</div>
+                            <a href="#order" class="btn small en">Order</a>
+                            <a href="#order" class="btn small ar" style="display:none;">اطلب</a>
+                        </div>
+                    </article>
+                    <article class="rel-card">
+                        <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=600&auto=format&fit=crop" alt="Smart LED Light">
+                        <div class="info">
+                            <h3 class="en">Smart LED Light</h3>
+                            <h3 class="ar" style="display:none;">إضاءة ذكية</h3>
+                            <div class="rel-price">EGP 349</div>
+                            <a href="#order" class="btn small en">Order</a>
+                            <a href="#order" class="btn small ar" style="display:none;">اطلب</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="order" id="order">
+                <h2 class="en">Request a New Order</h2>
+                <h2 class="ar" style="display:none;">طلب شراء جديد</h2>
+                <form id="orderForm">
+                    <div class="row">
+                        <label class="en" for="name">Full Name</label>
+                        <label class="ar" for="name" style="display:none;">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="row">
+                        <label class="en" for="phone">Phone (WhatsApp)</label>
+                        <label class="ar" for="phone" style="display:none;">رقم الهاتف (واتساب)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0100 988 4619" required>
+                    </div>
+                    <div class="row cols">
+                        <div>
+                            <label class="en" for="variant">Variant</label>
+                            <label class="ar" for="variant" style="display:none;">الخيار</label>
+                            <select id="variant" name="variant">
+                                <option>Standard</option>
+                                <option>Plus</option>
+                                <option>Pro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="en" for="quantity">Quantity</label>
+                            <label class="ar" for="quantity" style="display:none;">الكمية</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="en" for="notes">Notes (address, color, etc.)</label>
+                        <label class="ar" for="notes" style="display:none;">ملاحظات (العنوان، اللون، ...)</label>
+                        <textarea id="notes" name="notes" rows="3"
+                            placeholder="e.g. Black, deliver to 123 Main St"></textarea>
+                    </div>
+                    <div class="actions">
+                        <button type="submit" class="btn primary en">🟢 Send via WhatsApp</button>
+                        <button type="submit" class="btn primary ar" style="display:none;">🟢 إرسال عبر واتساب</button>
+                    </div>
+                    <small class="hint en">You will be redirected to WhatsApp to confirm the message.</small>
+                    <small class="hint ar" style="display:none;">سيتم تحويلك إلى واتساب لتأكيد الرسالة.</small>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p class="en">&copy; 2025 BlueWave Tech • All rights reserved</p>
+            <p class="ar" style="display:none;">&copy; 2025 بلو ويف تك • جميع الحقوق محفوظة</p>
+        </footer>
+    </div>
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lb-btn lb-close" id="lbClose" aria-label="Close">×</button>
+        <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous">&#8592;</button>
+        <img id="lbImg" alt="Preview">
+        <button class="lb-btn lb-next" id="lbNext" aria-label="Next">&#8594;</button>
+    </div>
+    <div class="language-toggle">
+        <button class="lang-btn" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn active" onclick="switchLang('ar')">العربية</button>
+    </div>
+    <script>
+        // Language switcher logic
+        const langBtns = document.querySelectorAll('.lang-btn');
+        langBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                langBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const lang = this.textContent.trim() === 'EN' ? 'en' : 'ar';
+                document.body.className = lang;
+                document.querySelectorAll('.en').forEach(e => e.style.display = lang === 'en' ? '' : 'none');
+                document.querySelectorAll('.ar').forEach(e => e.style.display = lang === 'ar' ? '' : 'none');
+                document.documentElement.lang = lang;
+            });
+        });
+        // Initialize default language based on body class (default: ar)
+        (function initLang(){
+            const currentLang = document.body.className || 'ar';
+            document.querySelectorAll('.en').forEach(e => e.style.display = currentLang === 'en' ? '' : 'none');
+            document.querySelectorAll('.ar').forEach(e => e.style.display = currentLang === 'ar' ? '' : 'none');
+            document.documentElement.lang = currentLang;
+            langBtns.forEach(b => {
+                const bLang = b.textContent.trim() === 'EN' ? 'en' : 'ar';
+                b.classList.toggle('active', bLang === currentLang);
+            });
+        })();
+        // Floating navbar on scroll
+        const navbar = document.querySelector('.floating-navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        // Scroll product images left/right
+        function scrollImages(direction) {
+            const images = document.getElementById('productImages');
+            const child = images.querySelector('.product-image');
+            const step = child ? child.getBoundingClientRect().width + 18 : 220;
+            images.scrollBy({ left: direction * step, behavior: 'smooth' });
+        }
+        // Build dots and sync active state
+        const imagesEl = document.getElementById('productImages');
+        const dotsEl = document.getElementById('productDots');
+        if (imagesEl && dotsEl) {
+            const slides = Array.from(imagesEl.querySelectorAll('img.product-image'));
+            dotsEl.innerHTML = slides.map((_, i) => `<span class="dot${i === 0 ? ' active' : ''}" data-i="${i}"></span>`).join('');
+            const dots = Array.from(dotsEl.querySelectorAll('.dot'));
+            function setActiveByScroll() {
+                const rect = imagesEl.getBoundingClientRect();
+                const centers = slides.map(img => Math.abs((img.getBoundingClientRect().left + img.getBoundingClientRect().right) / 2 - (rect.left + rect.right) / 2));
+                const idx = centers.indexOf(Math.min.apply(null, centers));
+                dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+            }
+            imagesEl.addEventListener('scroll', () => { requestAnimationFrame(setActiveByScroll); });
+            setActiveByScroll();
+            dots.forEach((d, i) => d.addEventListener('click', () => {
+                const target = slides[i];
+                if (target) {
+                    const left = target.offsetLeft - 12; // account for gap
+                    imagesEl.scrollTo({ left, behavior: 'smooth' });
+                }
+            }));
+        }
+        // WhatsApp order submit
+        const orderForm = document.getElementById('orderForm');
+        if (orderForm) {
+            orderForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const variant = document.getElementById('variant').value;
+                const quantity = document.getElementById('quantity').value;
+                const notes = document.getElementById('notes').value.trim();
+                const msg = `New Order%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AVariant: ${encodeURIComponent(variant)}%0AQuantity: ${encodeURIComponent(quantity)}%0ANotes: ${encodeURIComponent(notes)}`;
+                const to = '201009884619'; // Egypt country code +20
+                const url = `https://wa.me/${to}?text=${msg}`;
+                window.open(url, '_blank');
+            });
+        }
+
+        // Lightbox for images (product + gallery)
+        (function initLightbox() {
+            const all = Array.from(document.querySelectorAll('.product-images-scroll img, .gallery-images img'));
+            if (!all.length) return;
+            const lb = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lbImg');
+            const lbClose = document.getElementById('lbClose');
+            const lbPrev = document.getElementById('lbPrev');
+            const lbNext = document.getElementById('lbNext');
+            let idx = 0;
+            function open(i){ idx = i; lbImg.src = all[idx].src; lb.classList.add('open'); document.body.classList.add('modal-open'); }
+            function close(){ lb.classList.remove('open'); document.body.classList.remove('modal-open'); }
+            function prev(){ idx = (idx - 1 + all.length) % all.length; lbImg.src = all[idx].src; }
+            function next(){ idx = (idx + 1) % all.length; lbImg.src = all[idx].src; }
+            all.forEach((img,i)=>{ img.style.cursor='zoom-in'; img.addEventListener('click', ()=> open(i)); });
+            lbClose.addEventListener('click', close);
+            lbPrev.addEventListener('click', prev);
+            lbNext.addEventListener('click', next);
+            lb.addEventListener('click', (e)=>{ if(e.target === lb) close(); });
+            document.addEventListener('keydown', (e)=>{ if(!lb.classList.contains('open')) return; if(e.key==='Escape') close(); if(e.key==='ArrowLeft') prev(); if(e.key==='ArrowRight') next(); });
+        })();
+    </script>
+</body>
+
+</html>
